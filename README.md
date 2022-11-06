@@ -18,3 +18,12 @@
 # Technical Architecture: 
 
 ![Architecture](https://user-images.githubusercontent.com/114350077/200159994-aebf4a90-72ad-4be4-b43b-779690410e46.png)
+
+### Project Workflow:
+
+        The user interacts with the application.
+
+        Registers by giving the details as a donor.
+
+        The database will have all the details and if a user posts a request then 
+        the concerned blood group donors will get notified about it.
