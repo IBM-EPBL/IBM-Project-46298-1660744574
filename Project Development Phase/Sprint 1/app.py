@@ -98,32 +98,3 @@ def secondregister():
         msg= "Please fill out the form"
     print(msg)
     return "success"
-
-
-"""@app.route('/dashboard')
-def dash():
-    return render_template('dashboard.html')
-
-@app.route('/apply' ,methods=['GET', 'POST'])
-def apply():
-    msg=''
-    if request.method == 'POST':
-        username = request.form['username']
-        email-request.form['email']
-        qualitication-request.form['qualification']
-        skills=request.form['skills']
-        jobs=request.form['s']
-
-        insert_sql="INSERT INTO job values(?,?,?,?,?)"
-        prep_stmt-ita_dh.prepare (conn, insert_sq1)
-        ibm_db.bind_param(prep_stmt,1,username)
-        ibm_db.bind_param(prep_stmt,2, email)
-        ibm_db.bind_param(prep_stmt,3,qualification)
-        ibm_db.bind_param(prep_stmt,4,skills)
-        ibm_db.bind_param(prep_stmt,5, jobs)
-        ibm_db.execute(prep_stmt)
-        msg='You have successfully applied for job!'
-        session['loggedin']=True
-    elif request.method=='POST':
-        msg='Please fill the form!'
-    return render_template('apply.html',msg=msg) """
