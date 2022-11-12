@@ -6,7 +6,7 @@ app=Flask(__name__)
 
 app.secret_key='a'
 
-conn= ibm_db.connect("DATABASE=bludb;HOSTNAME=b1bc1829-6f45-4cd4-bef4-10cf081900bf.c1ogj3sd0tgtu0lqde00.databases.appdomain.cloud;PORT=32304;SECURITY=SSL;SSLSeverCertificate=DigiCertGlobalRootCA.crt;UID=lwj62946;PWD=hE2LCZgTYX3Iln9H",'','')
+conn= ibm_db.connect("DATABASE= ;HOSTNAME= ;PORT= ;SECURITY=SSL;SSLSeverCertificate=DigiCertGlobalRootCA.crt;UID= ;PWD= ",'','')
 
 @app.route('/')
 def home():
