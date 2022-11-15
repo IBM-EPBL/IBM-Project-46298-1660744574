@@ -12,33 +12,6 @@ conn= ibm_db.connect("DATABASE= ;HOSTNAME= ;PORT= ;SECURITY=SSL;SSLSeverCertific
 def home():
     return render_template('Register_1.html')
 
-@app.route('/login',methods=['GET','POST'])
-def login():
-    global userid
-    msg=''
-
-    if request.method == 'POST':
-        email=request.form['email']
-        password=request.form['password']
-        sql="SELECT * FROM DONORS WHERE EMAIL=? AND PASSWORD=?"
-        stmt=ibm_db.prepare(conn,sql)
-        ibm_db.bind_param(stmt,1,email)
-        ibm_db.bind_param(stmt,2,password)
-        ibm_db.execute(stmt)
-        account = ibm_db.fetch_assoc(stmt)
-        print(account)
-        if account:
-            session['loggedin'] = True
-            session['id']=account['USERNAME']
-            userid= account['USERNAME']
-            session['USERNAME'] =account['USERNAME']
-            msg = 'Logged in successfully!'
-
-            return "sucesss"
-        else:
-            msg='Incorrect username/password!'
-    return render_template('login.html',msg=msg)
-
 @app.route('/R_page',methods=['GET','POST'])
 def R_page():
     return render_template('Register_1.html')
